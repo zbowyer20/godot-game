@@ -2,6 +2,7 @@ extends Area2D
 
 @export var interaction_text: String = "Hello, world!"
 @export var portrait_path: String = "empty"
+@export var name_label: String = "empty'"
 
 var player_in_range = false
 
@@ -24,7 +25,7 @@ func _process(delta: float) -> void:
 		print("Hi")
 		# If dialog is NOT active, show it
 		if not DialogBox.is_active():
-			DialogBox.show_text(interaction_text, portrait_path)
+			DialogBox.show_text(name_label, interaction_text, portrait_path)
 			# disable movement
 			# var player = get_tree().get_nodes_in_group("PlayerGroup")[0] # or another reference
 			# player.movement_enabled = false
