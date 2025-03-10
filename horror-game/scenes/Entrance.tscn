@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://bhbarawtl0a8o"]
+[gd_scene load_steps=2 format=3 uid="uid://d3vn83ok4ld6f"]
+
+[ext_resource type="Script" uid="uid://b8ovpbwhpq6tg" path="res://scenes/entrance.gd" id="1_55iln"]
 
 [node name="Entrance" type="Node2D"]
+script = ExtResource("1_55iln")
