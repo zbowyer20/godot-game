@@ -1,0 +1,5 @@
+- Asked ChatGPT o1 on a starter kit for Godot:
+-- Give me a starter kit for how I can get started with Godot. I will eventually be making a JRPG-styled game where a sprite can walk around a map and move to other locations. The map will probably just be an image unless there's any support for tilesets, restricted areas, interaction points etc like I might have with RPG Maker.
+
+- Asked ChatGPT o1 on an IDE
+-- Is there an IDE I should be using for Godot? Ideally I could just use Visual Studio Code.
