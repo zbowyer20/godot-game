@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdvbmysx6c88o"]
+
+[ext_resource type="Script" uid="uid://dgddfdylb84mt" path="res://scenes/title_screen.gd" id="1_ch40n"]
+[ext_resource type="Texture2D" uid="uid://dj4nv0tcg7gv4" path="res://assets/logo.jpeg" id="2_dfj8j"]
+[ext_resource type="AudioStream" uid="uid://digjjf8slv66e" path="res://assets/audio/start.mp3" id="3_dfj8j"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_ch40n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(564, 574)
+texture = ExtResource("2_dfj8j")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dfj8j")
