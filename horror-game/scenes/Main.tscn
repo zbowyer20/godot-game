@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1uxwk8wgg5qb"]
+[gd_scene load_steps=4 format=3 uid="uid://b1uxwk8wgg5qb"]
 
 [ext_resource type="PackedScene" uid="uid://5ltuvnx62dxr" path="res://scenes/Map.tscn" id="1_rvslj"]
 [ext_resource type="PackedScene" uid="uid://cqg6s5udbfvmy" path="res://scenes/Character.tscn" id="2_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://duyyj1n2mekcb" path="res://scenes/Friend.tscn" id="3_0bbpv"]
 
 [node name="Main" type="Node2D"]
 
@@ -9,3 +10,7 @@
 
 [node name="Character" parent="." instance=ExtResource("2_0bbpv")]
 position = Vector2(-276, 245)
+
+[node name="Friend" parent="." instance=ExtResource("3_0bbpv")]
+position = Vector2(415, 418)
+interaction_text = "How are you?"
