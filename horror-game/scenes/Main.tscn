@@ -14,3 +14,4 @@ position = Vector2(-276, 245)
 [node name="Friend" parent="." instance=ExtResource("3_0bbpv")]
 position = Vector2(415, 418)
 interaction_text = "How are you?"
+portrait_path = "res://assets/zak.png"
