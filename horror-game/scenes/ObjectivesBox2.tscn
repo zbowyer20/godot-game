@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuxtpu2v56fbx"]
+
+[ext_resource type="Script" uid="uid://b7qu7dyjng2n3" path="res://scenes/objectives_box.gd" id="1_wunks"]
+
+[node name="ObjectivesBox" type="CanvasLayer" groups=["ObjectivesUIGroup"]]
+script = ExtResource("1_wunks")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = -364.0
+offset_top = 130.0
+offset_right = 22.0
+offset_bottom = 216.0
+theme_override_font_sizes/normal_font_size = 38
+text = "Objectives"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = -357.0
+offset_top = 188.0
+offset_right = 265.0
+offset_bottom = 284.0
+theme_override_font_sizes/normal_font_size = 26
+text = "- Do the washing up"
