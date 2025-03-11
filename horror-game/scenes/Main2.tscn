@@ -1,17 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://bp1gowa8qd31m"]
+[gd_scene load_steps=14 format=3 uid="uid://bp1gowa8qd31m"]
 
 [ext_resource type="PackedScene" uid="uid://dl1shwb6hg3xa" path="res://scenes/Desks.tscn" id="1_20mca"]
+[ext_resource type="Script" uid="uid://c8xv2oixbggb6" path="res://scenes/main_2.gd" id="1_v2mgg"]
 [ext_resource type="PackedScene" uid="uid://cqg6s5udbfvmy" path="res://scenes/Character.tscn" id="2_y2vse"]
 [ext_resource type="PackedScene" uid="uid://cuxtpu2v56fbx" path="res://scenes/ObjectivesBox2.tscn" id="3_y2vse"]
 [ext_resource type="PackedScene" uid="uid://jjh56qywqe20" path="res://scenes/Martin.tscn" id="4_i0u6e"]
 [ext_resource type="Script" uid="uid://h50t7j11qc4p" path="res://scenes/martin.gd" id="5_8xah2"]
+[ext_resource type="PackedScene" uid="uid://cg8fqn7y3rob1" path="res://scenes/Craig.tscn" id="6_ckpor"]
+[ext_resource type="AudioStream" uid="uid://cl7voxwoblldw" path="res://assets/audio/horror_movie_scream.mp3" id="7_58vmf"]
+[ext_resource type="Script" uid="uid://bg7c5h3ak3ax2" path="res://scenes/craig.gd" id="7_vyq8h"]
+[ext_resource type="PackedScene" uid="uid://bb4rgh74u2f8y" path="res://scenes/Return.tscn" id="9_58vmf"]
+[ext_resource type="PackedScene" uid="uid://dlov14b0svyj1" path="res://scenes/Horror.tscn" id="11_haedj"]
+[ext_resource type="PackedScene" uid="uid://gwh5xif1ghh1" path="res://scenes/HorrorScene.tscn" id="12_m2ten"]
+[ext_resource type="AudioStream" uid="uid://d3hm4pu0bkcmm" path="res://assets/audio/terrifying_shock.mp3" id="13_m2ten"]
 
 [node name="Main2" type="Node2D"]
+script = ExtResource("1_v2mgg")
 
 [node name="Desks" parent="." instance=ExtResource("1_20mca")]
 
 [node name="Character" parent="." instance=ExtResource("2_y2vse")]
-position = Vector2(498, 114)
+position = Vector2(498, 174)
 
 [node name="ObjectivesBox" parent="." instance=ExtResource("3_y2vse")]
 
@@ -20,3 +29,28 @@ position = Vector2(1055, 734)
 script = ExtResource("5_8xah2")
 portrait_path = "res://assets/martin-portrait.png"
 name_label = "Martin"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Martin"]
+stream = ExtResource("7_58vmf")
+volume_db = 3.279
+
+[node name="Craig" parent="." instance=ExtResource("6_ckpor")]
+position = Vector2(561, 1034)
+script = ExtResource("7_vyq8h")
+interaction_text = "This office hum—I’ve started to recognize each note in its tune."
+portrait_path = "res://assets/craig-portrait.png"
+name_label = "CrAIg"
+
+[node name="Return" parent="." instance=ExtResource("9_58vmf")]
+position = Vector2(690, 687)
+
+[node name="Horror" parent="." instance=ExtResource("11_haedj")]
+position = Vector2(689, 584)
+
+[node name="HorrorScene" parent="." instance=ExtResource("12_m2ten")]
+
+[node name="Shock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_m2ten")
+
+[connection signal="body_entered" from="Return" to="." method="_on_return_body_entered"]
+[connection signal="body_entered" from="Horror" to="." method="_on_horror_body_entered"]

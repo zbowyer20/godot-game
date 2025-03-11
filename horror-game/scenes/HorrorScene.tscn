@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://gwh5xif1ghh1"]
+
+[ext_resource type="Texture2D" uid="uid://b3kan76tjfk7c" path="res://assets/Leonardo_Phoenix_10_creepy_office_environment_dark_moody_light_0.jpg" id="1_swbe8"]
+
+[node name="HorrorScene" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_swbe8")

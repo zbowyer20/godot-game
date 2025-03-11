@@ -27,6 +27,6 @@ layout_mode = 0
 offset_left = -357.0
 offset_top = 188.0
 offset_right = 265.0
-offset_bottom = 284.0
+offset_bottom = 590.0
 theme_override_font_sizes/normal_font_size = 26
 text = "- Do the washing up"

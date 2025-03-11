@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg8fqn7y3rob1"]
+
+[ext_resource type="Texture2D" uid="uid://oftngx8o4u2r" path="res://assets/craig-sprite.png" id="1_mtrxo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuacq"]
+size = Vector2(99, 192)
+
+[node name="Craig" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(110.47, -227.623)
+scale = Vector2(0.363776, 0.363776)
+texture = ExtResource("1_mtrxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(118.5, -220)
+shape = SubResource("RectangleShape2D_yuacq")
