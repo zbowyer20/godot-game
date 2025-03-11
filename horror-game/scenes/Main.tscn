@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1uxwk8wgg5qb"]
+[gd_scene load_steps=6 format=3 uid="uid://b1uxwk8wgg5qb"]
 
 [ext_resource type="PackedScene" uid="uid://5ltuvnx62dxr" path="res://scenes/Map.tscn" id="1_rvslj"]
 [ext_resource type="PackedScene" uid="uid://cqg6s5udbfvmy" path="res://scenes/Character.tscn" id="2_0bbpv"]
-[ext_resource type="PackedScene" uid="uid://duyyj1n2mekcb" path="res://scenes/Friend.tscn" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://pdjokguoimg5" path="res://scenes/Gemma.tscn" id="4_vcsgt"]
+[ext_resource type="Script" uid="uid://bg326viuq0lqi" path="res://scenes/gemma.gd" id="5_c01mt"]
+[ext_resource type="PackedScene" uid="uid://cw4xb0vjsmqv5" path="res://scenes/ObjectivesBox.tscn" id="6_c01mt"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,8 +14,12 @@ position = Vector2(27, -10)
 [node name="Character" parent="." instance=ExtResource("2_0bbpv")]
 position = Vector2(233, 695)
 
-[node name="Friend" parent="." instance=ExtResource("3_0bbpv")]
-position = Vector2(603, 377)
-interaction_text = "How are you?"
-portrait_path = "res://assets/zak.png"
-name_label = "Zak"
+[node name="Gemma" parent="." instance=ExtResource("4_vcsgt")]
+position = Vector2(537, 617)
+script = ExtResource("5_c01mt")
+interaction_text = "Someone has left a lot of washing up in the sink. Can you go and do it?"
+portrait_path = "res://assets/gemma-portrait.png"
+name_label = "Gemma"
+
+[node name="ObjectivesBox" parent="." instance=ExtResource("6_c01mt")]
+layer = 2
